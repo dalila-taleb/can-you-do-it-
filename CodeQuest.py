@@ -8,15 +8,24 @@
 
 from helper import *
 
-
 def MyAnswer(self):
    # please put in your answer  here
-   answer = ""
-   print(answer)
+   current = self.headval
+   
+   unique_stringval_dict = {}
+   url_string = ""
+   while current:
 
+      value = str(current.dataval)
+
+      if value not in unique_stringval_dict:
+         unique_stringval_dict[value] = None
+         url_string +=value
+
+      #Move to the next
+      current = current.nextval
+
+   print(unique_stringval_dict)
+   print(url_string)
 
 MyAnswer(list)
-
-
-
-
